@@ -1,0 +1,62 @@
+/* base.css */
+/* reset + variables + common styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--white);
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --blue: #206dfb;
+  --darkBlueColor: #122649;
+  --lightBlueColor: #3c73ad;
+  --green: #2ed47a;
+  --black: #192a3e;
+  --orange: #fdab44;
+  
+}
+
+h1{
+  color: var(--white);
+  margin-top: 10px;
+}
+
+
+.btn{
+  padding: 20px;
+  background-color: var(--white);
+
+}
+
+.primary-button{
+ 
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.primary-button:hover{
+  background-color: var(--white);
+  color:var(--black);
+}
+
+.secondary-button{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.secondary-button:hover{
+  background-color:var(--white);
+  color:var(--black);
+}
+
+
+.heroCard-form{}
+
