@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Browse Jobs", href: "/jobs" },
+    { name: "Browse Jobs", href: "/browse-jobs" },
     { name: "Candidates", href: "/candidates" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
@@ -48,7 +48,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/jobs"
+              href="/browse-jobs"
               className="bg-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition"
             >
               Want a Job
