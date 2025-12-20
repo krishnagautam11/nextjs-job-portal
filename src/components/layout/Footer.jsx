@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import {
   FaTwitter,
   FaFacebookF,
@@ -18,7 +20,16 @@ export default function Footer() {
 
           {/* Column 1 */}
           <div className="footer-col">
-            <h3 className="footer-title">Skillhunt Jobboard</h3>
+            <h3 className="footer-title"> 
+              <Link href="/" className="text-2xl font-bold">
+              <Image
+                src="/images/logo.png"
+                alt="Skillhunt logo"
+                width={140}
+                height={40}
+                priority
+              />
+            </Link></h3>
             <p className="footer-text">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts.
@@ -96,7 +107,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Skillhunt. All rights reserved.
+            © {new Date().getFullYear()} JobAgora. All rights reserved.
           </p>
         </div>
 

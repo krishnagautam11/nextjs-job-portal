@@ -1,6 +1,6 @@
 export default function BrowseJobsHeader() {
   return (
-    <section className="browse-hero">
+    <section className="browse-hero sectionHero">
       <div className="browse-hero-overlay"></div>
 
       <div className="browse-hero-content">

@@ -1,7 +1,7 @@
 export default function BrowseJobsHero() {
   return (
     <section
-      className="hero-wrap hero-wrap-2"
+      className="hero-wrap hero-wrap-2 "
       style={{ backgroundImage: "url(/images/bg_1.jpg)" }}
     >
       <div className="overlay"></div>

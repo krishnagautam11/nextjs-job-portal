@@ -1032,6 +1032,147 @@
   font-size: 14px;
 }
 
+
+/* post page */
+/* ==============================
+   POST PAGE – FORM CONTROLS
+============================== */
+
+.post-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.post-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0 14px;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.post-form textarea {
+  height: 140px;
+  padding-top: 12px;
+  resize: none;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ===== Pricing Checkboxes ===== */
+
+.pricing-group {
+  margin-bottom: 30px;
+}
+
+.pricing-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.pricing-group input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+/* ===== Job Type Radios ===== */
+
+.section-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 12px;
+}
+
+.job-type-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.job-type-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.job-type-group input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+/* ===== Buttons ===== */
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary.small {
+  padding: 8px 18px;
+  font-size: 13px;
+}
+
+/* ===== Sidebar ===== */
+
+.post-sidebar-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.post-sidebar-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.post-sidebar-card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.post-sidebar-card .link {
+  color: #2563eb;
+}
+
+
+.sectionHero{
+  top: -64px;
+}
+
+
 @media (min-width: 375px) {
   .custom-container {
     max-width: 300px;
@@ -1136,6 +1277,11 @@
 
   .contact-map {
     min-height: 100%;
+  }
+  /* post page */
+    .post-grid {
+    grid-template-columns: 2fr 1fr; /* EXACT Skillhunt ratio */
+    gap: 30px;
   }
 }
 

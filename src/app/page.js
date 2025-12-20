@@ -8,7 +8,6 @@ import JobCategories from "@/components/home/JobCategories";
 import HomeCTA from "@/components/home/HomeCTA";
 import FeaturedJobs from "@/components/featured/FeaturedJobs";
 import Testimonials from "@/components/testimonials/Testimonials";
-import Footer from "@/components/layout/Footer";
 import BlogSectionHome from "@/components/blogs/BlogSectionHome";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <FeaturedJobs/>
       <Testimonials/>
       <BlogSectionHome/>
-      <Footer/>
     </>
   );
 }

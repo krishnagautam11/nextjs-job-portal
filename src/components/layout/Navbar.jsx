@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold">
-            Skillhunt
+            <Image
+              src="/images/logo.png"
+              alt="Skillhunt logo"
+              width={140}
+              height={40}
+              priority
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -31,9 +38,8 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm hover:text-blue-400 transition ${
-                  pathname === link.href ? "text-blue-400" : ""
-                }`}
+                className={`text-sm hover:text-blue-400 transition ${pathname === link.href ? "text-blue-400" : ""
+                  }`}
               >
                 {link.name}
               </Link>
@@ -41,7 +47,7 @@ export default function Navbar() {
 
             {/* CTA buttons */}
             <Link
-              href="/post-job"
+              href="/post"
               className="border border-blue-500 text-blue-400 px-4 py-2 rounded-md text-sm hover:bg-blue-500 hover:text-white transition"
             >
               Post a Job

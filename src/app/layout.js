@@ -4,6 +4,7 @@ import "@/styles/style.css";
 
 import ReduxProvider from "@/store/ReduxProvider";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Next.js Job Portal",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <Navbar />
           {children}
+          <Footer/>
         </ReduxProvider>
       </body>
     </html>

@@ -4,7 +4,7 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[360px] bg-[url('/images/bg_1.jpg')] bg-cover bg-center">
+      <section className="relative h-[360px] bg-[url('/images/bg_1.jpg')] bg-cover bg-center sectionHero">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-500 opacity-90" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center">
