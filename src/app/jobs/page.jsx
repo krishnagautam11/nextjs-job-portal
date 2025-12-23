@@ -2,6 +2,12 @@
 import { useSelector } from "react-redux";
 import JobCard from "@/components/jobs/JobCard";
 
+export const metadata = {
+  title: "Job Search Results",
+  description: "View jobs based on your search preferences.",
+};
+
+
 export default function JobsPage() {
   const { search, jobs } = useSelector((state) => state.jobs);
 

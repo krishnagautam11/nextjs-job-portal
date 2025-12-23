@@ -16,7 +16,7 @@ const jobs = [
   {
     id: 3,
     type: "Freelance",
-    title: "Open Source Interactive Developer",
+    title: "Java Developer",
     company: "New York Times",
     location: "Western City, UK",
   },

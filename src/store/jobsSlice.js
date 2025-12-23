@@ -4,7 +4,10 @@ import { jobs } from "../data/jobs";
 const initialState = {
   jobs,
   search: "",
+  location: "",
+  jobType: "",
   savedJobs: [],
+  currentPage: 1,
 };
 
 const jobsSlice = createSlice({
@@ -13,6 +16,28 @@ const jobsSlice = createSlice({
   reducers: {
     setSearch(state, action) {
       state.search = action.payload;
+      state.currentPage = 1; // reset page when filters change
+    },
+
+    setLocation(state, action) {
+      state.location = action.payload;
+      state.currentPage = 1;
+    },
+
+    setJobType(state, action) {
+      state.jobType = action.payload;
+      state.currentPage = 1;
+    },
+
+    setPage(state, action) {
+      state.currentPage = action.payload;
+    },
+
+    clearFilters(state) {
+      state.search = "";
+      state.location = "";
+      state.jobType = "";
+      state.currentPage = 1;
     },
 
     saveJob(state, action) {
@@ -32,5 +57,14 @@ const jobsSlice = createSlice({
   },
 });
 
-export const { setSearch, saveJob, removeSavedJob } = jobsSlice.actions;
+export const {
+  setSearch,
+  setLocation,
+  setJobType,
+  setPage,
+  clearFilters,
+  saveJob,
+  removeSavedJob,
+} = jobsSlice.actions;
+
 export default jobsSlice.reducer;

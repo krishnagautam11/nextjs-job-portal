@@ -1,38 +1,34 @@
 "use client";
-
-import {jobs} from "@/data/jobs";
+import { useSelector } from "react-redux";
 import BrowseJobCard from "./BrowseJobCard";
 
+const JOBS_PER_PAGE = 5;
+
 export default function BrowseJobsList() {
+  const { jobs, search, location, jobType, currentPage } =
+    useSelector((s) => s.jobs);
+
+  const filtered = jobs.filter((job) => {
+    const matchSearch =
+      job.title.toLowerCase().includes(search.toLowerCase()) ||
+      job.company.toLowerCase().includes(search.toLowerCase());
+
+    const matchLocation = !location || job.location === location;
+    const matchType = !jobType || job.type === jobType;
+
+    return matchSearch && matchLocation && matchType;
+  });
+
+  const start = (currentPage - 1) * JOBS_PER_PAGE;
+  const paginatedJobs = filtered.slice(start, start + JOBS_PER_PAGE);
+
+  if (!paginatedJobs.length) return <p>No jobs found</p>;
+
   return (
     <div className="browse-jobs-list">
-      {jobs.map((job) => (
+      {paginatedJobs.map((job) => (
         <BrowseJobCard key={job.id} job={job} />
       ))}
     </div>
   );
 }
-
-
-// "use client";
-
-// import { useSelector } from "react-redux";
-// import BrowseJobCard from "./BrowseJobCard";
-
-// export default function BrowseJobsList() {
-//   const jobs = useSelector((state) => state.jobs.jobs); 
-
-//   if (!jobs || jobs.length === 0) {
-//     return <p>No jobs found</p>;
-//   }
-
-//   return (
-//     <div className="row">
-//       {jobs.map((job) => (
-//         <div key={job.id} className="col-md-12">
-//           <BrowseJobCard job={job} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
