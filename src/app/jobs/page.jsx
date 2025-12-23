@@ -1,11 +1,10 @@
 "use client";
-import { useSelector } from "react-redux";
-import JobCard from "@/components/jobs/JobCard";
+export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Job Search Results",
-  description: "View jobs based on your search preferences.",
-};
+import { useSelector } from "react-redux";
+// import JobCard from "@/components/jobs/JobCard";
+import JobCard from "../../components/jobs/JobCard";
+
 
 
 export default function JobsPage() {
