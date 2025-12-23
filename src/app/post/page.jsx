@@ -1,7 +1,6 @@
-export const metadata = {
-  title: "Post a Job",
-  description: "Post new job openings and reach potential candidates.",
-};
+"use client";
+export const dynamic = "force-dynamic";
+
 
 
 export default function PostJobPage() {

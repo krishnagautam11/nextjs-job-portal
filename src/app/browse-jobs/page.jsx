@@ -1,14 +1,16 @@
-import BrowseJobsHeader from "@/components/browse-jobs/BrowseJobsHeader";
-import BrowseJobsList from "@/components/browse-jobs/BrowseJobsList";
-import BrowseFilters from "@/components/browse-jobs/BrowseFilters";
-import Pagination from "@/components/common/Pagination";
+import BrowseJobsHeader from "../../components/browse-jobs/BrowseJobsHeader";
+import BrowseJobsList from "../../components/browse-jobs/BrowseJobsList";
+import BrowseFilters from "../../components/browse-jobs/BrowseFilters";
+import Pagination from "../../components/common/Pagination";
+
+// import BrowseJobsHeader from "@/components/browse-jobs/BrowseJobsHeader";
+// import BrowseJobsList from "@/components/browse-jobs/BrowseJobsList";
+// import BrowseFilters from "@/components/browse-jobs/BrowseFilters";
+// import Pagination from "@/components/common/Pagination";
 
 // import Newsletter from "@/components/common/Newsletter";
 
-export const metadata = {
-  title: "Browse Jobs",
-  description: "Browse jobs by role, location and job type.",
-};
+
 
 
 export default function BrowseJobsPage() {

@@ -1,9 +1,5 @@
 "use client";
-
-export const metadata = {
-  title: "Contact",
-  description: "Get in touch with us for job-related queries and support.",
-};
+export const dynamic = "force-dynamic";
 
 
 export default function ContactPage() {
