@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faBuilding } from "@fortawesome/free-regular-svg-icons";
@@ -11,8 +12,9 @@ import { setSearch } from "@/store/jobsSlice";
 // import Image from "next/image";
 
 export const HeroCard = () => {
-  const [activeTab, setActiveTab] = useState("job");
 
+  const [activeTab, setActiveTab] = useState("job");
+  const router = useRouter();
 
   const dispatch = useDispatch();
   const search = useSelector((state) => state.jobs.search);
@@ -50,45 +52,18 @@ export const HeroCard = () => {
               icon={<FontAwesomeIcon icon={faFileLines} />}
             />
           </div>
-          {/* 
-          <div className="heroCard-counter">
-            <div className="counterOne">
-              <FontAwesomeIcon icon="fa-solid fa-globe" style={{ color: "#ffffff", }} />
-              <div className="counter-text">
-                <h2>46</h2>
-                <p>Countries</p>
-              </div>
-            </div>
 
-            <div className="counterTwo">
-              <FontAwesomeIcon icon="fa-regular fa-building" style={{ color: "#ffffff", }} />
-              <div className="counter-text">
-                <h2>450</h2>
-                <p>Compaines</p>
-              </div>
-            </div>
-
-            <div className="counterThree">
-              <FontAwesomeIcon icon="fa-regular fa-file-lines" style={{ color: "#ffffff", }} />
-              <div className="counter-text">
-                <h2>80,000</h2>
-                <p>Active Employees</p>
-              </div>
-            </div>
-
-
-          </div> */}
 
           {/* Search Tabs */}
           <div className=" heroCard-form w-full max-w-4xl mt-10">
 
             {/* Tabs */}
-            <div className="flex justify-center  rounded-t-xl overflow-hidden ">
+            <div className="heroCard-tabs flex justify-center  rounded-t-xl overflow-hidden ">
               <button
                 onClick={() => setActiveTab("job")}
                 className={` text-sm btn font-medium transition ${activeTab === "job"
-                    ? "primary-button:hover"
-                    : " btn"
+                  ? "tab-active"
+                  : "tab-inactive"
                   }`}
               >
                 Find a Job
@@ -96,9 +71,9 @@ export const HeroCard = () => {
 
               <button
                 onClick={() => setActiveTab("candidate")}
-                className={` text-sm btn font-medium transition ${activeTab === "candidate"
-                    ? "secondary-button"
-                    : "btn"
+                className={` text-sm  btn font-medium transition ${activeTab === "candidate"
+                  ? "tab-active"
+                  : "tab-inactive"
                   }`}
               >
                 Find a Candidate
@@ -108,7 +83,10 @@ export const HeroCard = () => {
             {/* Form */}
             <div className="heroCard-formBox rounded-b-xl shadow-lg p-4">
               <form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  router.push("/browse-jobs");
+                }}
                 className="grid grid-cols-1 md:grid-cols-4 gap-4"
               >
                 {/* Keyword */}

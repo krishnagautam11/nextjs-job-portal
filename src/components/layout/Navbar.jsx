@@ -38,7 +38,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm hover:text-blue-400 transition ${pathname === link.href ? "text-blue-400" : ""
+                className={`nav-link text-sm  transition ${pathname === link.href ? "active" : ""
                   }`}
               >
                 {link.name}
@@ -48,17 +48,12 @@ export default function Navbar() {
             {/* CTA buttons */}
             <Link
               href="/post"
-              className="border border-blue-500 text-blue-400 px-4 py-2 rounded-md text-sm hover:bg-blue-500 hover:text-white transition"
+              className="border btn rounded-md text-sm secondary-button"
             >
               Post a Job
             </Link>
 
-            <Link
-              href="/browse-jobs"
-              className="bg-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition"
-            >
-              Want a Job
-            </Link>
+           
           </nav>
 
           {/* Mobile Menu Button */}

@@ -3,6 +3,12 @@ import CandidateList from "@/components/candidates/CandidateList";
 import CandidateFilters from "@/components/candidates/CandidateFilters";
 import CandidatesPagination from "@/components/common/Pagination";
 
+export const metadata = {
+  title: "Candidates",
+  description: "Explore available candidates and their professional profiles.",
+};
+
+
 export default function CandidatesPage() {
   return (
     <>
